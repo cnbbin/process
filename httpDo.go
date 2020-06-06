@@ -6,7 +6,12 @@ import (
 	"net/http"
 )
 
-func HttpJsonDo(url string, jsonMarshal []byte, httpMethod string) ([]byte, error) {
+// @title    		HttpJsonDo
+// @description   	Http Send Json
+// @auth      		CyBen             			(2020-06-06 11:50:46)
+// @param     		httpMethod,url,jsonMarshal  string,string,[]byte
+// @return    		response,error       		[]byte, error
+func HttpJsonDo(httpMethod, url string, jsonMarshal []byte) ([]byte, error) {
 	var err error
 	var response []byte
 	client := &http.Client{}
