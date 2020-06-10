@@ -9,7 +9,7 @@ import (
 // 	@Author 		CyBen
 // 	@param   		DecimalNumber 		int
 //	@return   		BinNumber   Bin1count Bin0count		string int int
-func convertToBin(num int) (string, int, int) {
+func ConvertToBin(num int) (string, int, int) {
 	s := ""
 	s1 := 0
 	s0 := 0
