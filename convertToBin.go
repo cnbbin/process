@@ -27,8 +27,13 @@ func convertToBin(num int) (string, int, int) {
 		} else {
 			s0++
 		}
-		// strconv.Itoa() 将数字强制性转化为字符串
-		s = strconv.Itoa(lsb) + s
+		// 三种 int  转 string
+		//s = fmt.Sprintf("%d", lsb) +s
+		s = strconv.FormatInt(int64(lsb), 2) + s
+		//s = strconv.Itoa(lsb) + s
+
+		//参考各大神，strconv.FormatInt()效率最高，fmt.Sprintf()效率最低 ,而 strconv.Itoa 是通过 strconv.FormatInt()转转
+
 	}
 	return s, s0, s1
 }
