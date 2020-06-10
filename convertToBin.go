@@ -12,8 +12,8 @@ import (
 //	@return   		BinNumber   Bin1count Bin0count		string int int
 func convertToBin(num int) (string, int, int) {
 	s := ""
-	a := 0
-	c := 0
+	s1 := 0
+	s0 := 0
 	if num == 0 {
 		return "0", 0, 1
 	}
@@ -23,12 +23,12 @@ func convertToBin(num int) (string, int, int) {
 		lsb := num % 2
 		fmt.Println(lsb)
 		if lsb == 1 {
-			a++
+			s1++
 		} else {
-			c++
+			s0++
 		}
 		// strconv.Itoa() 将数字强制性转化为字符串
 		s = strconv.Itoa(lsb) + s
 	}
-	return s, a, c
+	return s, s0, s1
 }
