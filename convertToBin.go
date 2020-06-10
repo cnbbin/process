@@ -1,7 +1,6 @@
 package process
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -21,7 +20,6 @@ func convertToBin(num int) (string, int, int) {
 	// num /= 2 每次循环的时候 都将num除以2  再把结果赋值给 num
 	for ; num > 0; num /= 2 {
 		lsb := num % 2
-		fmt.Println(lsb)
 		if lsb == 1 {
 			s1++
 		} else {
